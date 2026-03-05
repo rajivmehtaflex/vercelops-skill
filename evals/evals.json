@@ -1,0 +1,35 @@
+{
+  "skill_name": "vercelops",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need to deploy my Next.js application to Vercel. Can you help me set it up and deploy to production?",
+      "expected_output": "Should guide through initializing a Next.js project with vercel init, running vercel dev locally, adding environment variables if needed, deploying to preview with 'vercel', and then deploying to production with 'vercel --prod'",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I have a production deployment that's broken. The logs show errors but I'm not sure how to debug this. What should I do?",
+      "expected_output": "Should suggest using 'vercel ls' to list deployments, 'vercel inspect <id>' to inspect the broken deployment, 'vercel logs <url> --since 1h' to view logs, and potentially 'vercel rollback <id>' if a rollback is needed",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I want to add a custom domain to my Vercel project and set up SSL. What's the process?",
+      "expected_output": "Should explain using 'vercel domains add example.com', configuring DNS records as instructed, using 'vercel certs add example.com' for SSL, and 'vercel alias set' to map the domain to production",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "I need to add environment variables for my API keys. Some should only be in production, others in preview and development.",
+      "expected_output": "Should demonstrate using 'vercel env add API_KEY production' for production-only variables, 'vercel env add API_KEY preview' for preview, 'vercel env add API_KEY development' for local dev, and 'vercel env ls' to list them. Should also mention secrets for sensitive data.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "I have an existing project on Vercel but it's a new laptop. How do I connect this local directory to my existing project?",
+      "expected_output": "Should explain using 'vercel link' to connect the local directory to the existing project, and 'vercel pull' to download project settings from the cloud",
+      "files": []
+    }
+  ]
+}
