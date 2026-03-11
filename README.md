@@ -29,6 +29,16 @@ The canonical installable skill folder in this repo is `.agents/skills/vercelops
 
 ## Installation
 
+### skills.sh install
+
+If you use the `skills.sh` ecosystem, install directly from GitHub:
+
+```bash
+npx skills add https://github.com/rajivmehtaflex/vercelops-skill --skill vercelops
+```
+
+This resolves the skill from `.agents/skills/vercelops` in this repository.
+
 ### Universal install
 
 Copy `.agents/skills/vercelops` into your agent's skills directory.
@@ -52,6 +62,17 @@ cp -r vercelops-skill/.agents/skills/vercelops ~/.claude/skills/
 1. Download the `.agents/skills/vercelops` folder from this repository.
 2. Place it in your tool's skills directory as `vercelops/`.
 3. Restart the tool if it loads skills only at startup.
+
+## Prerequisites
+
+Installing the skill into an agent is separate from having the OS tools required to execute the commands the skill recommends.
+
+- `Node.js` and `npm`: required to install and update the Vercel CLI.
+- `Vercel CLI` (`vercel`): install with `npm i -g vercel`.
+- `Vercel account`: required for project, deployment, env, and domain operations.
+- Authenticated Vercel session: run `vercel login` before remote operations.
+- `Git`: recommended for clone-based workflows and common Vercel Git integrations.
+- Project-specific runtime tools: your app may still need its own framework/runtime dependencies for local development and builds.
 
 ## Requirements
 
