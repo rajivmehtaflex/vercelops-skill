@@ -1,6 +1,6 @@
 # Vercel Operations Skill
 
-A comprehensive Claude Code skill for working with the Vercel cloud platform and CLI. This skill helps you deploy applications, manage projects, configure environments, handle domains, and perform all Vercel-related operations.
+A portable agent skill for working with the Vercel cloud platform and CLI. It is packaged in the universal `.agents/skills` layout so it can be reused by tools that follow the emerging shared skill convention, including `skills.sh`-compatible tooling.
 
 ## What This Skill Does
 
@@ -15,24 +15,43 @@ The **vercelops** skill provides complete command reference and workflow guidanc
 - **Project Management**: List projects, switch teams, manage Git integrations
 - **Advanced Operations**: Cache management, webhooks, blob storage, API calls
 
+## Repository Layout
+
+```text
+.agents/
+  skills/
+    vercelops/
+      SKILL.md
+      evals/
+```
+
+The canonical installable skill folder in this repo is `.agents/skills/vercelops/`.
+
 ## Installation
+
+### Universal install
+
+Copy `.agents/skills/vercelops` into your agent's skills directory.
+
+Examples:
+
+- Claude Code: `~/.claude/skills/vercelops`
+- Codex: `~/.codex/skills/vercelops`
+- Any `skills.sh`-compatible tool: its configured skills directory
 
 ### Option 1: Clone the Repository
 
 ```bash
-# Clone this repository
 git clone https://github.com/rajivmehtaflex/vercelops-skill.git
-
-# Copy the skill to your Claude skills directory
 mkdir -p ~/.claude/skills
-cp -r vercelops-skill/vercelops ~/.claude/skills/
+cp -r vercelops-skill/.agents/skills/vercelops ~/.claude/skills/
 ```
 
 ### Option 2: Manual Installation
 
-1. Download the `vercelops` folder from this repository
-2. Place it in your Claude skills directory (`~/.claude/skills/`)
-3. Restart Claude Code
+1. Download the `.agents/skills/vercelops` folder from this repository.
+2. Place it in your tool's skills directory as `vercelops/`.
+3. Restart the tool if it loads skills only at startup.
 
 ## Requirements
 
