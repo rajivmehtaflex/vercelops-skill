@@ -1,6 +1,6 @@
 ---
 name: vercelops
-description: Use when working with Vercel cloud platform - deploying applications, managing projects, handling environment variables, configuring domains, monitoring logs, or any Vercel CLI operations. TRIGGER when user mentions: Vercel deployment, vercel deploy, vercel env, vercel domains, preview deployments, production deployments, edge functions, serverless functions on Vercel, vercel project setup, vercel CLI commands, or when deploying Next.js/Nuxt/SvelteKit/Astro apps to Vercel.
+description: "Use when working with Vercel cloud platform - deploying applications, managing projects, handling environment variables, configuring domains, monitoring logs, or any Vercel CLI operations. TRIGGER when user mentions: Vercel deployment, vercel deploy, vercel env, vercel domains, preview deployments, production deployments, edge functions, serverless functions on Vercel, vercel project setup, vercel CLI commands, or when deploying Next.js/Nuxt/SvelteKit/Astro apps to Vercel."
 ---
 
 # Vercel Operations
